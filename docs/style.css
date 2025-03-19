@@ -6,6 +6,8 @@
     --background-light: rgba(25, 25, 25);
     --text: rgba(240, 230, 245);
     --link: rgba(135, 206, 250);
+    --padding: 10px;
+    --hover: 1.05;
 }
 
 html {
@@ -25,6 +27,10 @@ body {
 
 header {
     background-color: var(--background-medium);
+    
+    align-content: start;
+    padding-left: var(--padding);
+    padding-bottom: var(--padding);
 }
 
 footer {
@@ -33,20 +39,90 @@ footer {
     overflow: hidden;
 }
 
+h1 {
+    padding-left: 10px;
+}
+
+h2 {
+    padding-left: 20px;
+}
+
+h3 {
+    padding-left: 10px;
+}
+
+h4 {
+    background-color: lightskyblue;
+    color: black;
+
+    border-radius: 7.5px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
 a {
     color: var(--link);
+}
+
+.splash-img {
+    min-width: 256px;
+    max-width: 480px;
+    width: 100%;
+
+    border-radius: 8px;
+    transition: .35s ease;
+}
+.splash-img:hover {
+    border-radius: 16px;
+    transform: scale(var(--hover));
+}
+
+.gallery-img {
+    min-width: 256px;
+    max-width: 372px;
+    width: 100%;
+
+    border-radius: 4px;
 }
 
 .section {
     background-color: var(--background-medium);
 
     margin: 1%;
+    padding-bottom: var(--padding);
+}
+
+.sub-section {
+    background-color: var(--background-light);
+
+    align-content: start;
+    margin: 1%;
 }
 
 .section-horizontal {
     background-color: var(--background-medium);
-
+    
     float: left;
+    padding: 5px;
+}
+
+.container {
+    background-color: var(--background-light);
+    
+    display: flex;
+}
+
+.column {
+    float: left;
+    display: inline-flex;
+    width: 100%;
+    padding: var(--padding);
+}
+
+.column-left {
+    float: left;
+    display: inline-flex;
+    padding: var(--padding);
 }
 
 .icon {
@@ -54,6 +130,7 @@ a {
     margin-right: 5px;
     text-decoration: none;
 }
+
 @media (min-width: 1200px) {
     .icon {
         font-size: 2.5rem;
