@@ -1,22 +1,32 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
 
 :root {
-    --background-dark: rgba(5, 5, 5);
-    --background-medium: rgb(15, 15, 15);
-    --background-light: rgba(25, 25, 25);
-    --text: rgba(240, 230, 245);
-    --link: rgba(135, 206, 250);
+    --dark-grey: rgba(5, 5, 5);
+    --medium-grey: rgb(15, 15, 15);
+    --light-grey: rgba(25, 25, 25);
+    --verylight-grey: rgba(50, 50, 50);
+    --white: rgba(240, 230, 245);
+    --blue: rgba(135, 206, 250);
     --padding: 10px;
+    --less-padding: 5px;
     --hover: 1.05;
+    --opacity: 0.6;
 }
 
 html {
-    background-color: var(--background-light);
+    background-color: var(--light-grey);
+    scroll-behavior: smooth;
+}
+
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 1;
 }
 
 body {
-    background-color: var(--background-dark);
-    color: var(--text);
+    background-color: var(--dark-grey);
+    color: var(--white);
 
     max-width: 1000px;
     margin-left: auto;
@@ -26,7 +36,7 @@ body {
 }
 
 header {
-    background-color: var(--background-medium);
+    background-color: var(--medium-grey);
     
     align-content: start;
     padding-left: var(--padding);
@@ -34,7 +44,7 @@ header {
 }
 
 footer {
-    background-color: var(--background-medium);
+    background-color: var(--medium-grey);
 
     overflow: hidden;
 }
@@ -61,20 +71,80 @@ h4 {
 }
 
 a {
-    color: var(--link);
+    color: var(--blue);
 }
 
-.splash-img {
-    min-width: 256px;
-    max-width: 480px;
-    width: 100%;
+.text {
+    margin-left: 1%;
+    margin-right: 1%;
+}
 
+.btn {
+  cursor: pointer;
+}
+
+.topnav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: var(--light-grey);
+  display: flex;
+  justify-content: center;
+}
+
+.topnav li {
+  float: left;
+}
+
+.topnav a {
+  display: block;
+  color: var(--white);
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.topnav a:hover {
+  background-color: var(--dark-grey);
+}
+
+.topnav a.active {
+  background-color: var(--blue);
+  color: var(--dark-grey);
+}
+
+.section {
+    background-color: var(--medium-grey);
+
+    margin: 1%;
+    padding-bottom: var(--padding);
+    border-radius: 4px;
+}
+
+.sub-section {
+    background-color: var(--light-grey);
+
+    align-content: start;
+    margin: 1%;
     border-radius: 8px;
-    transition: .35s ease;
 }
-.splash-img:hover {
-    border-radius: 16px;
-    transform: scale(var(--hover));
+
+.section-horizontal {
+    background-color: var(--medium-grey);
+    
+    float: left;
+    padding: 5px;
+}
+
+.container {
+    background-color: var(--light-grey);
+    
+    display: flex;
+}
+
+.gallery-container {
+    background-color: var(--light-grey);
 }
 
 .gallery-img {
@@ -85,31 +155,79 @@ a {
     border-radius: 4px;
 }
 
-.section {
-    background-color: var(--background-medium);
-
-    margin: 1%;
-    padding-bottom: var(--padding);
+.slides {
+    display: none;
 }
 
-.sub-section {
-    background-color: var(--background-light);
-
-    align-content: start;
-    margin: 1%;
+.slide-img {
+    width: 92.5%;
+    margin-left: 3.75%;
+    border-radius: 12px;
 }
 
-.section-horizontal {
-    background-color: var(--background-medium);
+.cursor {
+    cursor: pointer;
+}
+
+.image {
+    opacity: var(--opacity);
+    width: 100%;
+
+    border-radius: 8px;
+    transition: .35s ease;
+}
+
+.image:hover {
+    opacity: 1;
+}
+
+.image.active {
+    opacity: 1;
     
+    transform: scale(var(--hover));
+}
+
+.prev,
+.next {
+  left: 0;
+  float: left;
+  padding: 16px;
+  margin-top: 0;
+  color: var(--white);
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+  transition: .35s ease;
+}
+
+.next {
+  right: 0;
+  float: right;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.gallery-row {
+    padding-top: 1.5%;
+}
+
+.gallery-row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.gallery-column {
     float: left;
-    padding: 5px;
-}
-
-.container {
-    background-color: var(--background-light);
-    
-    display: flex;
+    width: 16.66%;
+    padding-left: 1%;
+    border-radius: 18px 18px 18px 18px;
 }
 
 .column {
@@ -134,5 +252,12 @@ a {
 @media (min-width: 1200px) {
     .icon {
         font-size: 2.5rem;
+    }
+}
+
+@media (min-width: 750px) {
+    .prev,
+    .next {
+        margin-top: 2.5%;
     }
 }
