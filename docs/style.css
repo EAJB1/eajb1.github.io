@@ -50,6 +50,7 @@ footer {
 }
 
 h1 {
+    color: var(--blue);
     padding-left: 10px;
 }
 
@@ -61,17 +62,21 @@ h3 {
     padding-left: 10px;
 }
 
-h4 {
+a {
+    color: var(--blue);
+}
+
+p {
+    font-size: large;
+}
+
+.tag {
     background-color: lightskyblue;
     color: black;
-
+    
     border-radius: 7.5px;
     padding-left: 5px;
     padding-right: 5px;
-}
-
-a {
-    color: var(--blue);
 }
 
 .text {
