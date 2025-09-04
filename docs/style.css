@@ -273,8 +273,7 @@ p {
 .icon,
 .icon-link {
     color: var(--blue);
-    /*font-size: calc(1rem + 2vw);*/
-    font-size: 2.5rem;
+    font-size: calc(1rem + 4vw);
     margin-right: 5px;
     text-decoration: none;
 }
@@ -292,10 +291,10 @@ p {
 }
 
 @media (min-width: 1200px) {
-    /*.icon,
+    .icon,
     .icon-link {
         font-size: 2.5rem;
-    }*/
+    }
 }
 
 @media (min-width: 750px) {
