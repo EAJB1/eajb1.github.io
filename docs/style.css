@@ -9,8 +9,8 @@
     --blue: rgba(135, 206, 250);
     --padding: 10px;
     --less-padding: 5px;
-    --hover: 1.05;
-    --opacity: 0.6;
+    --scale: 1.1;
+    --opacity: 0.4;
 }
 
 html {
@@ -115,7 +115,8 @@ a {
 }
 
 .section {
-    background-color: var(--medium-grey);
+    /*background-color: var(--medium-grey);*/
+    background-color: var(--dark-grey);
 
     margin: 1%;
     padding-bottom: var(--padding);
@@ -140,6 +141,7 @@ a {
 .container {
     background-color: var(--light-grey);
     
+    margin: 1%;
     display: flex;
 }
 
@@ -184,7 +186,7 @@ a {
 .image.active {
     opacity: 1;
     
-    transform: scale(var(--hover));
+    transform: scale(var(--scale));
 }
 
 .prev,
@@ -235,6 +237,7 @@ a {
     display: inline-flex;
     width: 100%;
     padding: var(--padding);
+    text-align: center;
 }
 
 .column-left {
@@ -247,6 +250,19 @@ a {
     float: right;
     display: inline-flex;
     padding: var(--padding);
+}
+
+.column-left-half {
+    float: left;
+    width: 100%;
+    text-align: left
+}
+
+.column-right-half {
+    float: right;
+    width: 100%;
+    padding: var(--padding);
+    text-align: right;
 }
 
 .icon {
