@@ -273,7 +273,7 @@ p {
 .icon,
 .icon-link {
     color: var(--blue);
-    font-size: calc(1rem + 4vw);
+    font-size: calc(1rem + 20vw);
     margin-right: 5px;
     text-decoration: none;
 }
