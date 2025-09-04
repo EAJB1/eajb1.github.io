@@ -273,7 +273,7 @@ p {
 .icon,
 .icon-link {
     color: var(--blue);
-    font-size: calc(1rem + 2vw);
+    /*font-size: calc(1rem + 2vw);*/
     margin-right: 5px;
     text-decoration: none;
 }
@@ -286,7 +286,7 @@ p {
 
 .icon-link:hover {
     color: var(--blue);
-    
+
     transform: scale(var(--scale));
 }
 
