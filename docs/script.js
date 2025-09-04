@@ -2,15 +2,15 @@ var btnContainer = document.getElementById("myTopnav");
 var btns = btnContainer.getElementsByClassName("btn");
 
 for (var i = 0; i < btns.length; i++) {
-  btns[i].addEventListener("click", function() {
-    var current = btnContainer.getElementsByClassName("active");
-    if (current.length > 0){
-        for (var i = 0; i < current.length; i++){
-            current[i].className = "btn";
+    btns[i].addEventListener("click", function() {
+        var current = btnContainer.getElementsByClassName("active");
+        if (current.length > 0){
+            for (var i = 0; i < current.length; i++){
+                current[i].className = "btn";
+            }
+            this.className = "btn active";
         }
-        this.className = "btn active";
-    }
-  });
+    });
 }
 
 let slideIndex = 1;

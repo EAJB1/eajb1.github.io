@@ -243,6 +243,12 @@ a {
     padding: var(--padding);
 }
 
+.column-right {
+    float: right;
+    display: inline-flex;
+    padding: var(--padding);
+}
+
 .icon {
     font-size: calc(1rem + 2vw);
     margin-right: 5px;
