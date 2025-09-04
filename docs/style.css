@@ -290,14 +290,14 @@ p {
     transform: scale(var(--scale));
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 420px) {
     .icon,
     .icon-link {
         font-size: 2.5rem;
     }
 }
 
-@media (min-width: 750px) {
+@media (min-width: 740px) {
     .prev,
     .next {
         margin-top: 2.5%;
