@@ -17,13 +17,14 @@ let slideIndex = 1;
 showSlides(slideIndex, "redthumb");
 showSlides(slideIndex, "opengl");
 showSlides(slideIndex, "criticalexposure");
+showSlides(slideIndex, "spartanascent");
 
 function plusSlides(n, id) {
-  showSlides(slideIndex += n, id);
+    showSlides(slideIndex += n, id);
 }
 
 function currentSlide(n, id) {
-  showSlides(slideIndex = n, id);
+    showSlides(slideIndex = n, id);
 }
 
 function showSlides(n, id) {
