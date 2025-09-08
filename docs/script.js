@@ -13,34 +13,36 @@ for (var i = 0; i < btns.length; i++) {
     });
 }
 
-let slideIndex = 1;
-showSlides(slideIndex, "redthumb");
-showSlides(slideIndex, "opengl");
-showSlides(slideIndex, "criticalexposure");
-showSlides(slideIndex, "spartanascent");
+let slideIndices = [1, 1, 1, 1];
+let ids = ["redthumb", "opengl", "criticalexposure", "spartanascent"]
 
-function plusSlides(n, id) {
-    showSlides(slideIndex += n, id);
+showSlides(slideIndices[0], 0);
+showSlides(slideIndices[1], 1);
+showSlides(slideIndices[2], 2);
+showSlides(slideIndices[3], 3);
+
+function plusSlides(n, i) {
+    showSlides(slideIndices[i] += n, i);
 }
 
-function currentSlide(n, id) {
-    showSlides(slideIndex = n, id);
+function currentSlide(n, i) {
+    showSlides(slideIndices[i] = n, i);
 }
 
-function showSlides(n, id) {
+function showSlides(n, idIndex) {
   let i;
-  var element = document.getElementById(id);
+  var element = document.getElementById(ids[idIndex]);
   let slides = element.querySelectorAll(".slides");
   let dots = element.querySelectorAll(".image");
  
-  if (n > slides.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = slides.length}
+  if (n > slides.length) {slideIndices[idIndex] = 1}
+  if (n < 1) {slideIndices[idIndex] = slides.length}
   for (i = 0; i < slides.length; i++) {
     slides[i].style.display = "none";
   }
   for (i = 0; i < dots.length; i++) {
     dots[i].className = dots[i].className.replace(" active", "");
   }
-  slides[slideIndex-1].style.display = "block";
-  dots[slideIndex-1].className += " active";
+  slides[slideIndices[idIndex]-1].style.display = "block";
+  dots[slideIndices[idIndex]-1].className += " active";
 }
