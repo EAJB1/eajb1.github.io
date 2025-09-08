@@ -13,8 +13,8 @@ for (var i = 0; i < btns.length; i++) {
     });
 }
 
-let slideIndices = [1, 1, 1, 1];
-let ids = ["redthumb", "opengl", "criticalexposure", "spartanascent"]
+var slideIndices = [1, 1, 1, 1];
+var ids = ["redthumb", "opengl", "criticalexposure", "spartanascent"]
 
 showSlides(slideIndices[0], 0);
 showSlides(slideIndices[1], 1);
